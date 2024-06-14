@@ -15,7 +15,7 @@ const NewTask = () => {
     const task = { title, description, deadline, priority, status };
     
     try {
-        const response = await fetch('http://localhost:3000/tasks', {
+        const response = await fetch('https://ticktocktask-backend.onrender.com/tasks', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

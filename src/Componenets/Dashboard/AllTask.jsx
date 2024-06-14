@@ -12,7 +12,7 @@ const AllTasks = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:3000/tasks');
+      const response = await fetch('https://ticktocktask-backend.onrender.com/tasks');
       if (response.ok) {
         const data = await response.json();
         setTasks(data); // Assuming data is an array of tasks fetched from the backend
@@ -52,7 +52,7 @@ const AllTasks = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+      const response = await fetch(`https://ticktocktask-backend.onrender.com/tasks/${taskId}`, {
         method: 'DELETE',
       });
 
@@ -91,7 +91,7 @@ const AllTasks = () => {
 
     // Save updated task status to backend
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${movedTask._id}`, {
+      const response = await fetch(`https://ticktocktask-backend.onrender.com/tasks/${movedTask._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

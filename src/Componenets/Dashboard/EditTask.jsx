@@ -17,7 +17,7 @@ const EditTask = () => {
 
   const fetchTask = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`);
+      const response = await fetch(`https://ticktocktask-backend.onrender.com/tasks/${taskId}`);
       if (response.ok) {
         const data = await response.json();
         setTitle(data.title);
@@ -39,7 +39,7 @@ const EditTask = () => {
     const updatedTask = { title, description, deadline, priority, status };
 
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+      const response = await fetch(`https://ticktocktask-backend.onrender.com/tasks/${taskId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
