@@ -4,7 +4,7 @@ function Banner() {
   return (
     <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src="/src/assets/Banner.svg" className="max-w-lg" />
+    <img src="/Banner.svg" className="max-w-lg" />
     <div>
       <h1 className="text-4xl font-bold">Stay on Track with TickTack Task!</h1>
       <p className="py-6 mr-0 lg:mr-6">
